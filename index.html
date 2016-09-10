@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="weatherApp">
+
+<head>
+    <title> AngularJS Weather Forcast SPA </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+    <!--    Load bootstrap CSS-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+        html,
+        body,
+        input,
+        select,
+        textarea {
+            font-size: 1.05em !important
+        }
+    </style>
+    <!--    Load Angualr via CDN-->
+    <script src="//code.angularjs.org/1.5.8/angular.min.js"></script>
+    <script src="//code.angularjs.org/1.5.8/angular-route.min.js"></script>
+    <script src="//code.angularjs.org/1.5.8/angular-resource.min.js"></script>
+    <!--    Load App JS-->
+    <script src="assets/js/app.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header"> <a href="" class="navbar-brand">
+                    AngualrJS Weather
+                </a></div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/"><i class="fa fa-home">Home</i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div ng-view></div>
+    </div>
+</body>
+
+</html>

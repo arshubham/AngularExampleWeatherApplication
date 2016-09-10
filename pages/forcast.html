@@ -1,0 +1,15 @@
+forcast for {{ city }}
+<p><a href="#/">Back to Search</a></p>
+<hr /> Days: <a href="#/forcast/2" ng-class="{ 'bg-primary' : days === '2' }">2</a> | <a href="#/forcast/5" ng-class="{ 'bg-primary' : days === '5' }">5</a> | <a href="#/forcast/7" ng-class="{ 'bg-primary' : days === '7' }">7</a>
+<hr />
+<div ng-repeat="w in weatherResult.list">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ converttoDate(w.dt) | date: "MMM d, y" }}</h3> </div>
+                <div class="panel-body"> Daytime Temperature: {{ converttoF(w.temp.day) }} </div>
+            </div>
+        </div>
+    </div>
+</div>
